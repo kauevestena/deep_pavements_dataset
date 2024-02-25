@@ -4,7 +4,7 @@ This repository holds the dataset to be used to improve semantic models on the c
 
 ## How to use
 
-- Folder Names are the labels.
+- Folder Names are the labels. Thy are also available in "classes.txt"
 - Labels are compliant with OSM tags, you can check the values at [the wiki](https://wiki.openstreetmap.org/wiki/Key:surface)
 
 ## Collection choices
