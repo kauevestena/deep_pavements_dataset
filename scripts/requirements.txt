@@ -1,5 +1,6 @@
 pandas
 plotly
 ipykernel
+jupyter
 scikit-learn
 nbformat
