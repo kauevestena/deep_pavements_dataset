@@ -6,9 +6,9 @@ this script will copy all filenames from one folder to another
 
 example usage:
 
-    python copying.py --input ./input
+    python scripts/copying.py --input ./input
 
-The input folderpath must point to a folder with only a single level subfolders, which will be copied to the output folder
+The input folderpath must point to a folder with only a single level of subfolders that must be named after the standard classes, which will be copied to the "dataset" folder
 
 '''
 
