@@ -6,7 +6,7 @@ import argparse
 import pandas as pd
 import plotly.express as px
 
-raw_reports_path = os.path.join('analysis', 'raw_reports_first_test')
+raw_reports_path = os.path.join('analysis', 'raw_reports')
 
 class_label = 'class'
 prediction_label = 'prediction'
