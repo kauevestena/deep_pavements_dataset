@@ -4,3 +4,4 @@ ipykernel
 jupyter
 scikit-learn
 nbformat
+matplotlib
