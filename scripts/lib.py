@@ -47,3 +47,8 @@ def read_raw_reports(inpath = raw_reports_path):
             model_names.append(model_name)
 
     return dfs_dict, [cname.replace('_', ' ') for cname in available_classes], list(set(model_names))
+
+def get_sample_amounts():
+    for class_label in os.listdir(DATASET_PATH):
+        class_path = os.path.join(DATASET_PATH, class_label)
+        print(class_label, len(os.listdir(class_path)))
