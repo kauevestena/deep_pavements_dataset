@@ -5,6 +5,7 @@ import hashlib
 import argparse
 import pandas as pd
 import plotly.express as px
+import numpy as np
 
 raw_reports_path = os.path.join('analysis', 'raw_reports')
 
