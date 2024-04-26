@@ -52,3 +52,11 @@ def get_sample_amounts():
     for class_label in os.listdir(DATASET_PATH):
         class_path = os.path.join(DATASET_PATH, class_label)
         print(class_label, len(os.listdir(class_path)))
+
+def get_avaliable_classes_alphabetic():
+    try:
+        classlist = os.listdir(DATASET_PATH)
+    except:
+        classlist = os.listdir(os.path.join('..',DATASET_PATH))
+
+    return sorted(classlist)
