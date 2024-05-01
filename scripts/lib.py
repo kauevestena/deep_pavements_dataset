@@ -1,6 +1,6 @@
 from constants import *
 import shutil
-import os
+import os, json
 import hashlib
 import argparse
 import pandas as pd
@@ -61,3 +61,7 @@ def get_avaliable_classes_alphabetic():
         classlist = os.listdir(os.path.join('..',DATASET_PATH))
 
     return sorted(classlist)
+
+def read_json(path):
+    with open(path, 'r', encoding='utf-8') as f:
+        return json.load(f)
