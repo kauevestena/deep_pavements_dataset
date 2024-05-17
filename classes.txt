@@ -1,9 +1,9 @@
 asphalt
 concrete
-paving_stones
+paving stones
 sett
 cobblestone
-concrete_plates
+concrete plates
 compacted
 gravel
 ground
