@@ -1,11 +1,10 @@
 asphalt
-concrete
-paving stones
-sett
 cobblestone
-concrete plates
 compacted
+concrete
+concrete plates
+grass
 gravel
 ground
-grass
-sand
+paving stones
+sett
