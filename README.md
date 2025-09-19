@@ -39,11 +39,15 @@ deep_pavements_dataset/
 ├── README.md              # Main documentation
 ├── LICENSE               # MIT License
 ├── classes.txt           # List of class names
+├── CONTRIBUTING.md       # Contribution guidelines
 ├── dataset/              # Main dataset directory
 │   ├── asphalt/         # 500 asphalt images
 │   ├── concrete/        # 500 concrete images
 │   ├── paving_stones/   # 500 paving stones images
 │   └── ...              # Other surface type directories
+├── examples/             # Usage examples and quick start
+│   ├── README.md        # Comprehensive usage examples
+│   └── quick_start.py   # Quick verification script
 ├── scripts/              # Utility and analysis scripts
 │   ├── ABOUT.md         # Scripts documentation
 │   ├── constants.py     # Dataset constants
@@ -58,6 +62,16 @@ deep_pavements_dataset/
 ```
 
 ## Getting Started
+
+### Quick Verification
+
+Run the quick start script to verify the dataset is properly set up:
+
+```bash
+python examples/quick_start.py
+```
+
+This will display dataset statistics and confirm everything is ready for use.
 
 ### Prerequisites
 
@@ -111,6 +125,10 @@ The repository includes several utility scripts for dataset management and analy
 - **Analysis notebooks**: Jupyter notebooks for model evaluation and visualization
 
 See [scripts/ABOUT.md](scripts/ABOUT.md) for detailed documentation on using these tools.
+
+### Code Examples
+
+For comprehensive code examples including PyTorch and TensorFlow integration, see [examples/README.md](examples/README.md).
 
 ## Dataset Design Philosophy
 
