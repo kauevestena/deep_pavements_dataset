@@ -1,14 +1,175 @@
-# deep_pavements_dataset
+# Deep Pavements Dataset
 
-This repository holds the dataset to be used to improve semantic models on the classification of pavements. All images came from Wikimedia Commons, Mapillary or Flickr, licensed under CC Compatible licenses.
+A comprehensive image dataset for pavement surface classification using semantic models. This dataset contains 5,000 high-quality images across 10 different pavement surface types, designed for computer vision and machine learning research.
 
-## How to use
+## Dataset Overview
 
-- Folder Names are the labels. Thy are also available in "classes.txt"
-- Labels are compliant with OSM tags, you can check the values at [the wiki](https://wiki.openstreetmap.org/wiki/Key:surface)
+The Deep Pavements Dataset is specifically designed for training and evaluating machine learning models on pavement surface classification tasks. All images are sourced from Wikimedia Commons, Mapillary, and Flickr under CC-compatible licenses, ensuring legal compliance for research and commercial use.
 
-## Collection choices
+### Dataset Statistics
 
-- Images are in all categories of quality and resolution
-- This dataset was designed with the idea of minimal effort in mind, so there's no subcategories or discrimination of different traits among the samples
-- Some classes will be automatically generated, but curated manually
+- **Total Images**: 5,000
+- **Number of Classes**: 10
+- **Images per Class**: 500
+- **Format**: Various image formats (PNG, JPG)
+- **License**: CC Compatible licenses
+- **Source**: Wikimedia Commons, Mapillary, Flickr
+
+### Surface Classes
+
+The dataset includes the following pavement surface types, compliant with OpenStreetMap (OSM) tagging standards:
+
+1. **Asphalt** - Standard road asphalt surfaces
+2. **Cobblestone** - Traditional cobblestone surfaces
+3. **Compacted** - Compacted earth or gravel surfaces
+4. **Concrete** - Concrete pavement surfaces  
+5. **Concrete Plates** - Large concrete slabs
+6. **Grass** - Grass-covered surfaces
+7. **Gravel** - Loose gravel surfaces
+8. **Ground** - Natural earth/dirt surfaces
+9. **Paving Stones** - Interlocking paver blocks
+10. **Sett** - Small cobblestones or granite blocks
+
+For detailed information about these surface types, refer to the [OSM surface tag documentation](https://wiki.openstreetmap.org/wiki/Key:surface).
+
+## Repository Structure
+
+```
+deep_pavements_dataset/
+├── README.md              # Main documentation
+├── LICENSE               # MIT License
+├── classes.txt           # List of class names
+├── dataset/              # Main dataset directory
+│   ├── asphalt/         # 500 asphalt images
+│   ├── concrete/        # 500 concrete images
+│   ├── paving_stones/   # 500 paving stones images
+│   └── ...              # Other surface type directories
+├── scripts/              # Utility and analysis scripts
+│   ├── ABOUT.md         # Scripts documentation
+│   ├── constants.py     # Dataset constants
+│   ├── lib.py           # Utility functions
+│   ├── copying.py       # Dataset copying utilities
+│   ├── requirements.txt # Python dependencies
+│   └── *.ipynb          # Analysis notebooks
+└── analysis/             # Analysis results and reports
+    ├── figures/         # Generated charts and visualizations
+    ├── finetuned/       # Fine-tuned model results
+    └── raw_reports/     # Raw analysis reports
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.7+
+- Virtual environment (recommended)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/kauevestena/deep_pavements_dataset.git
+cd deep_pavements_dataset
+```
+
+2. Create and activate a virtual environment:
+```bash
+python -m venv dpd
+source dpd/bin/activate  # On Windows: dpd\Scripts\activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r scripts/requirements.txt
+```
+
+## Usage
+
+### Basic Usage
+
+The dataset is organized with folder names as labels. Each subdirectory in the `dataset/` folder contains 500 images of the corresponding surface type.
+
+```python
+import os
+
+# List all available classes
+classes = os.listdir('dataset/')
+print(f"Available classes: {classes}")
+
+# Count images per class
+for class_name in classes:
+    count = len(os.listdir(f'dataset/{class_name}'))
+    print(f"{class_name}: {count} images")
+```
+
+### Using the Utility Scripts
+
+The repository includes several utility scripts for dataset management and analysis:
+
+- **copying.py**: Copy and organize images from external sources
+- **lib.py**: Core utility functions for dataset operations
+- **Analysis notebooks**: Jupyter notebooks for model evaluation and visualization
+
+See [scripts/ABOUT.md](scripts/ABOUT.md) for detailed documentation on using these tools.
+
+## Dataset Design Philosophy
+
+### Collection Principles
+
+- **Variety**: Images span all categories of quality and resolution to ensure model robustness
+- **Minimal Effort**: No subcategories or fine-grained trait discrimination to keep the dataset simple and focused
+- **Manual Curation**: While some classes are automatically generated, all are manually curated for quality
+- **OSM Compliance**: All labels follow OpenStreetMap surface tagging standards for consistency
+
+### Quality Considerations
+
+- Images represent real-world conditions with varying lighting, angles, and quality
+- No artificial preprocessing or enhancement to maintain authentic conditions
+- Balanced dataset with equal representation across all classes
+- Mixed resolution and quality to improve model generalization
+
+## Analysis and Evaluation
+
+The repository includes comprehensive analysis tools for model evaluation:
+
+- **Model Comparison**: Tools for comparing different computer vision models
+- **Performance Metrics**: Confusion matrices, classification reports, and accuracy metrics
+- **Visualization**: Charts and plots for result analysis
+- **Fine-tuning Results**: Evaluation of fine-tuned models on the dataset
+
+## License and Citation
+
+This dataset is released under the MIT License. All images are sourced from platforms with CC-compatible licenses.
+
+### Citation
+
+If you use this dataset in your research, please cite:
+
+```bibtex
+@dataset{deep_pavements_dataset,
+  title={Deep Pavements Dataset},
+  author={Kauê de Moraes Vestena},
+  year={2024},
+  url={https://github.com/kauevestena/deep_pavements_dataset},
+  note={A comprehensive dataset for pavement surface classification}
+}
+```
+
+## Contributing
+
+Contributions to improve the dataset or analysis tools are welcome! Please:
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+For major changes, please open an issue first to discuss the proposed modifications.
+
+## Related Projects
+
+- [Deep Pavements Sample Picker](https://github.com/kauevestena/deep_pavements_sample_picker) - Tools for quality testing and sample selection
+
+## Contact
+
+For questions, issues, or collaboration opportunities, please open an issue on GitHub or contact the repository maintainer.
